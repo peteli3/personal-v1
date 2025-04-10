@@ -2,9 +2,9 @@
 
 Homepage containing links and short bio.
 
-```bash
 Available make commands:
 
+```bash
 templ       run hot-reloading templ dev server
 tailwind    run hot-reloading tailwind css server
 clean       delete generated files
