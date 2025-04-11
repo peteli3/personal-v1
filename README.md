@@ -21,25 +21,19 @@ export LINODE=
 scp \
     docker-compose.yaml \
     personal-v1.tar \
-    nginx.conf \
-    nginx-challenge.conf \
-    fetch-ssl-certs.sh \
     root@${LINODE}:/root/
 
 ssh $LINODE
 cat personal-v1.tar | docker load
 ```
 
-Obtain or renew ssl certs:
-
-```bash
-./fetch-ssl-certs.sh
-```
+To obtain or renew ssl certs, see:
+* https://github.com/peteli3/certbot
 
 Commands for operation and monitoring:
 
 ```bash
-docker compose up --detach nginx personal
+docker compose up --detach
 docker compose down
 docker compose ls
 docker compose logs -f nginx
